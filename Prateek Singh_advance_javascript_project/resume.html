@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume Templates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card-2">
+            <div class="formgroup">
+                <button id="prevbtn" class="pev-btn d-none" onclick="getPrev()">Previous</button>
+
+                <input type="text" id="searchbox" class="searchbox"
+                    placeholder="Search for keywords to filter the resume " onkeyup="getdata(event)" required>
+
+                <button id="nextbtn" class="next-btn d-none" onclick="getNext()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resumetemp" class="container d-none">
+        <div class="card-3">
+
+            <div class="header-row">
+                <div class="row">
+                    <div class="space-between">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                            <h1 id="name">Jhon Doe</h1>
+                        </div>
+                        <div class="col usericon"><i class="fa fa-user "></i></div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Applied for: <span id="AppliedFor">Software engineer</span></h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="resume-body">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="title">
+                                <h3 style="margin:2px !important">Personal Information</h3>
+                            </div>
+                        </div>
+                        <section id="personal-info">
+                            <div class="row">
+                                <div class="info-right"><span id="phone">9999999999</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><span id="email">john@gmail.com</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><a id="profiles" href="">fb</a></div>
+                            </div>
+                        </section>
+
+                        <div class="row">
+                            <div class="title">
+                                <h3 style="margin:2px !important">Technical skills</h3>
+                            </div>
+                        </div>
+                        <section id="tech-skills">
+                            <div class="row">
+                                <div class="info-right"><span>HTML</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><span>CSS</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><span>Javascript</span></div>
+                            </div>
+                        </section>
+
+                        <div class="row">
+                            <div class="title">
+                                <h3 style="margin:2px !important">Hobbies</h3>
+                            </div>
+                        </div>
+                        <section id="hobbies">
+                            <div class="row">
+                                <div class="info-right"><span>Wildlife</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><span>Dance</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="info-right"><span>Workout</span></div>
+                            </div>
+                        </section>
+
+
+
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="title-right">
+                                <h2 style="margin:2px !important">Work Experience in Previous Company</h2>
+                            </div>
+                        </div>
+                        <section class="content">
+                            <div class="row m-bt">
+                                <div class="info-left"><strong>Company Name: </strong><span
+                                        id="companyname">Harman</span></div>
+                            </div>
+                            <div class="row m-bt">
+                                <div class="info-left"><strong>Position: </strong><span id="position">Associate
+                                        Engineer</span></div>
+                            </div>
+                            <div class="row m-bt">
+                                <div class="info-left"><strong>Start date: </strong><span
+                                        id="startdate">2013-01-01</span></div>
+                            </div>
+                            <div class="row m-bt">
+                                <div class="info-left"><strong>End date: </strong><span id="enddate">2014-01-01</span>
+                                </div>
+                            </div>
+                            <div class="row m-bt">
+                                <div class="info-left"><strong>Summary: </strong><span id="summary">Associate engineer
+                                        with development, testing verification and validation
+                                        experience on Car UI display systems.Performed phone projection development of
+                                        user
+                                        stories and testing with infotainment system such as Android auto ,Car
+                                        playAnalyzed
+                                        requirements, created test plans, executed test cases for connectivity epic such
+                                        as C-connect,
+                                        F-connect.Good at analyzing DLT logs and analyzing the code refactor
+                                        areas.</span></div>
+                            </div>
+
+                        </section>
+                        <div class="row">
+                            <div class="title-right">
+                                <h2 style="margin:2px !important">Projects</h2>
+                            </div>
+                        </div>
+                        <section class="content">
+                            <div class="row m-bt">
+                                <div class="info-left"><strong id="projectname">Diabetic Retinopaty</strong><strong> :
+                                    </strong><span id="projectdesc">created a GUI using QT designer which will take
+                                        image of retina as
+                                        input, input image will be processed and compare with the images present in
+                                        database and
+                                        then classified as one of DR stage or normal. OpenCV and image processing
+                                        concepts are
+                                        used. survey paper on this project is publish in 2nd international conference on
+                                        Topical
+                                        Transcend in Science, Technology & Management.</span></div>
+                            </div>
+                        </section>
+                        <div class="row">
+                            <div class="title-right">
+                                <h2 style="margin:2px !important">Education</h2>
+                            </div>
+                        </div>
+                        <section class="content-list">
+                            <div class="row m-bt">
+                                <div class="info-left">
+                                    <ul>
+                                        <li><strong>UG: </strong><span id="UG">Sai Vidya Institute of Technology, B.E
+                                                Computer Science and Engineering, 2011-01-01,
+                                                2013-01-01, 8.7</span></li>
+                                        <li><strong>PU: </strong><span id="PU">KV AFS YELAHANKA, 8.7</span></li>
+                                        <li><strong>High School: </strong><span id="HS">KV AFS Bhuj, 8.7</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="row">
+                            <div class="title-right">
+                                <h2 style="margin:2px !important">Internship</h2>
+                            </div>
+                        </div>
+                        <section class="content-list">
+                            <div class="row m-bt">
+                                <div class="info-left">
+                                    <ul>
+                                        <li><strong>Company Name: </strong><span id="icompanyname">Ibm</span></li>
+                                        <li><strong>Position: </strong><span id="iposition">intern</span></li>
+                                        <li><strong>Start Date: </strong><span id="istartdate">2013-01-01</span></li>
+                                        <li><strong>End Date: </strong><span id="ienddate">2014-01-01</span></li>
+                                        <li><strong>Summary: </strong><span id="isummary">Learned about Tools used for
+                                                website testing such as Deep Trawl, NVDA, web
+                                                developer extension, OpenVAS.Learned about the importance and concept of
+                                                OWASP Learned React JS and worked for Frontend development with
+                                                professional.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="row">
+                            <div class="title-right">
+                                <h2 style="margin:2px !important">Achievements</h2>
+                            </div>
+                        </div>
+                        <section class="content-list">
+                            <div class="row m-bt">
+                                <div class="info-left">
+                                    <ul>
+
+                                        <li><span id="asummary">Attended 5 days industry orientation workshop organized
+                                                by free software movement</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="notfound" class="container d-none">
+        <div class="card-5">
+            <div class="notfound-row">
+                <div class="row">
+                    <div class="space-between">
+                        <div class="col-2"></div>
+                        <div class="col-4 usericon"><i class="fa fa-frown-o"></i></div>
+                        <div class="col">
+                            <h2>No such result found</h2>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/index.js"></script>
+</body>
+
+</html>
